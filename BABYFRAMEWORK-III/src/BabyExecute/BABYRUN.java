@@ -30,7 +30,7 @@ public class BABYRUN extends BabyTestSteps {
 	public static void setInputFile(String inputFile) {
 		BABYRUN.inputFile = inputFile;
 	}
-	
+	//Main
 	public static void main(String ar[])  
 	{
 		try{
