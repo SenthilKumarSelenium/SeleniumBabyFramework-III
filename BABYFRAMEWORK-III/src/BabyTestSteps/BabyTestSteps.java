@@ -87,7 +87,10 @@ public class BabyTestSteps  {
 	  String browser=TCID;
 	        if(browser.equals("Mozilla"))
 	        {
+//	        	driver = new FirefoxDriver();
+	        	System.setProperty("webdriver.gecko.driver", obj.ReadProperty("Geckodriver"));
 	        	driver = new FirefoxDriver();
+	        	 
 	        }
 	        if(browser.equals("IE"))
 	        {
