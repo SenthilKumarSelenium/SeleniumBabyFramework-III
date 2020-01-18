@@ -90,11 +90,11 @@ public class FaceBook extends BabyTestSteps {
   public static void fbRegistrationDropDown() 
   {
 	  try{
- 		    babyfunction.inputbyid(fb.ReadProperty("fbFirstname"), "Enter First name", Excel.Exceldata("FBTestData", "FirstName"));
-		    babyfunction.inputbyid(fb.ReadProperty("fbLastName"), "Enter Last Name", Excel.Exceldata("FBTestData", "LastName"));
-		    babyfunction.inputbyid(fb.ReadProperty("fbmailId"), "Enter Mail ID", Excel.Exceldata("FBTestData", "MailID"));
-		    babyfunction.inputbyid(fb.ReadProperty("fbReenterMailid"), "Enter Mail OID again", Excel.Exceldata("FBTestData", "ConfirmMailID"));
-		    babyfunction.inputbyid(fb.ReadProperty("fbnewPassword"), "Enter Confirm Password", Excel.Exceldata("FBTestData", "Password"));
+ 		    babyfunction.inputbyname(fb.ReadProperty("fbFirstname"), "Enter First name", Excel.Exceldata("FBTestData", "FirstName"));
+		    babyfunction.inputbyname(fb.ReadProperty("fbLastName"), "Enter Last Name", Excel.Exceldata("FBTestData", "LastName"));
+		    babyfunction.inputbyname(fb.ReadProperty("fbmailId"), "Enter Mail ID", Excel.Exceldata("FBTestData", "MailID"));
+		    babyfunction.inputbyname(fb.ReadProperty("fbReenterMailid"), "Enter Mail ID again", Excel.Exceldata("FBTestData", "ConfirmMailID"));
+		    babyfunction.inputbyname(fb.ReadProperty("fbnewPassword"), "Enter Confirm Password", Excel.Exceldata("FBTestData", "Password"));
 		    
 		  
 		    babyfunction.DropSelectbyID(fb.ReadProperty("fbDaySelectid"), "Drop down select day", Excel.Exceldata("FBTestData", "DD"));
@@ -108,7 +108,7 @@ public class FaceBook extends BabyTestSteps {
 		    babyfunction.clickbyid(fb.ReadProperty("female"), "Click female option", "Nil");	
 		    }
 		    babyfunction.ScreenShot("FB Registration Page");
-		    babyfunction.clickbyid(fb.ReadProperty("fbsignup"), "Click signup Button", "Nil");
+		    babyfunction.clickbyname(fb.ReadProperty("fbsignup"), "Click signup Button", "Nil");
 	  }catch(Exception e){
 		  Report.fail("Error: "+e, "Nil", "Nil");
 }
